@@ -74,8 +74,7 @@
 
           xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
               if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-                f.action = 'ok.html';
-                f.submit();
+                window.location.href = "ok.html";
               }
           }
           xhr.send("api_key="+API_KEY+"&name="+fname+"&phone="+fphone+"&ip="+ip+"&country_code="+COUNTRY_CODE+"&target_hash="+HASH+"&data1="+DATA1+"&data2="+DATA2);
